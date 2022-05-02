@@ -1,0 +1,68 @@
+@import "../colors.scss";
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+}
+
+.title {
+  color: $cream;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: $offwhite;
+  gap: 2rem;
+  width: 20rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  &:hover {
+    box-shadow: blue 0px 0px 0px 2px inset, #141414 5px -5px 0px -3px,
+      rgb(31, 193, 27) 5px -5px, #141414 10px -10px 0px -3px,
+      rgb(255, 217, 19) 10px -10px, #141414 15px -15px 0px -3px,
+      rgb(255, 156, 85) 15px -15px, #141414 20px -20px 0px -3px,
+      rgb(255, 85, 85) 20px -20px;
+    transform: scale(1.05);
+  }
+  &__image {
+    height: 20rem;
+    width: 100%;
+    & > img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    &-title {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    &-year {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+  }
+  &__description {
+    font-size: 1.4rem;
+    text-align: justify;
+  }
+}
+
+.booklist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
